@@ -13,7 +13,7 @@ sass:
 google_analytics_id: false # replace with "UA-XXXX"
 
 logo:
-  logo_desktop_image: assets/images/logo/favicon1.png
+  logo_desktop_image: assets/images/logo/university-school-svgrepo-com.svg
   logo_desktop_text: "Computer <strong>Science</strong>"
   logo_mobile_image: assets/images/logo/logo-mobile.svg
   logo_mobile_text: ""
