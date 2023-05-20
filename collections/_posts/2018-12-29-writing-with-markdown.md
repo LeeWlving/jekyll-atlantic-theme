@@ -2,7 +2,7 @@
 layout: post
 title: "Locality Preserving Multiview Graph Hashing for Large Scale Remote Sensing Image Search"
 date: 2023-06-02T10:26:40+10:00
-authors: ["Wenyun Li", "Guo Zhong","Xinyu Lu","Chi-Man Pun"]
+authors: ["Wenyun Li"]
 categories: ["RemoteSensing", "Hash", "InformationRetrieval"]
 tags: ["InformationRetrieval"]
 description: Learn how to use Markdown to write blog posts. Understand front-matter and how it is used in templates.
