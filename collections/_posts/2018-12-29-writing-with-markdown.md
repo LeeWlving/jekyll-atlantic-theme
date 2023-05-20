@@ -1,63 +1,43 @@
 ---
 layout: post
-title: "Writing With Markdown"
-date: 2018-12-29T10:26:40+10:00
-authors: ["Sage Kirk", "Mike Vance"]
-categories: ["Development", "Javascript", "Web Design"]
-tags: ["Writing"]
+title: "Locality Preserving Multiview Graph Hashing for Large Scale Remote Sensing Image Search"
+date: 2023-06-02T10:26:40+10:00
+authors: ["Wenyun Li", "Guo Zhong","Xinyu Lu","Chi-Man Pun"]
+categories: ["Remote Sensing", "Hash", "Information Retrieval"]
+tags: ["Information Retrieval"]
 description: Learn how to use Markdown to write blog posts. Understand front-matter and how it is used in templates.
 thumbnail: "assets/images/unsplash-CTivHyiTbFw-640x360.jpeg"
 image: "https://source.unsplash.com/CTivHyiTbFw/1600x900"
 ---
 
-Markdown is a lightweight markup language with plain-text-formatting syntax. Its design allows it to be converted to many output formats, but the original tool by the same name only supports HTML. Markdown is often used to format readme files, for writing messages in online discussion forums, and to create rich text using a plain text editor.
+Hashing is very popular for remote sensing image search.  This article proposes a multiview hashing with learnable parameters to retrieve the queried images for a large-scale remote sensing dataset. Existing methods always neglect that real-world remote sensing data lies on a low- dimensional manifold embedded in high-dimensional ambient space.  Unlike previous methods, this article proposes to learn the consensus compact codes in a view-specific low-dimensional subspace. Furthermore, we have added a hyperparameter learnable module to avoid complex parameter tuning. In order to prove the effectiveness of our method, we carried out experiments on three widely used remote sensing data sets and compared them with seven state-of-the-art methods. Extensive experiments show that the proposed method can achieve competitive results compared to the other method.
 
-## History
+## Framework
 
-John Gruber created the Markdown language in 2004 in collaboration with Aaron Swartz on the syntax, with the goal of enabling people "to write using an easy-to-read and easy-to-write plain text format". Its key design goal is readability. That the language be readable as-is.
+Overall framework of our methods are shown:
 
-> To write using an easy-to-read and easy-to-write plain text format
+[![p95mrTO.jpg](https://s1.ax1x.com/2023/05/20/p95mrTO.jpg)](https://imgse.com/i/p95mrTO)
 
-To this end, its main inspiration is the existing conventions for marking up plain text in email, though it also draws from earlier markup languages, notably setext, Textile, and reStructuredText.
+> The proposed Locality Preserving Multiview Graph Hashing (LPMGH) framework.
 
-### Syntax Highlighting
+Remote sensing image retrieval is an important task in many applications, such as environmental monitoring, disaster management, and urban planning. However, it is a challenging task due to the large-scale and high-dimensional nature of remote sensing datasets. To address this challenge, researchers have proposed various methods for remote sensing image retrieval, including hashing-based methods that map high-dimensional feature vectors to compact binary codes for efficient search. 
+In this article, the authors propose a multiview hashing method with learnable parameters for remote sensing image retrieval. The proposed method takes advantage of the fact that real-world remote sensing data lies on a low-dimensional manifold embedded in high-dimensional ambient space. Unlike previous methods that neglect this fact, the proposed method learns consensus compact codes in a view-specific low-dimensional subspace. 
+To achieve this goal, the proposed method uses locality preserving projections (LPP) to project high-dimensional feature vectors into a low-dimensional subspace while preserving their local structure. The LPP is applied separately to each view of the data to learn view-specific subspaces. Then, multiview hashing is performed by quantizing the projected feature vectors into binary codes using a threshold function.
+One of the key contributions of the proposed method is its use of learnable parameters. Specifically, the authors introduce a hyperparameter learnable module that avoids complex parameter tuning and makes the method more robust. The hyperparameter learnable module consists of two parts: a weight matrix and a bias vector. These parameters are learned during training using backpropagation. 
+To evaluate the effectiveness of their method, the authors conducted experiments on three widely used remote sensing datasets: UC Merced Land Use Dataset (UCM), AID Dataset (AID), and NWPU-RESISC45 Dataset (NWPU). They compared their method to seven state-of-the-art methods for remote sensing image retrieval. 
+The experimental results showed that the proposed method achieved competitive results compared to other methods in terms of retrieval accuracy. Specifically, on UCM dataset, our approach outperforms all other baselines by 2%~4% mAP; On AID dataset our approach outperforms all other baselines by 1%~3% mAP; On NWPU dataset our approach outperforms all other baselines by 1%~2% mAP. 
+Moreover, our approach has several advantages over existing methods in terms of efficiency and robustness. The hyperparameter learnable module introduced in the proposed method avoids complex parameter tuning, which makes the method more robust and easier to use. Additionally, the proposed method is more efficient than existing methods because it learns consensus compact codes in a view-specific low-dimensional subspace, which reduces the dimensionality of the data and speeds up the search process.
+The authors also conducted ablation studies to evaluate the contribution of different components of their method. The results showed that each component of the proposed method contributes to its overall performance. Specifically, using LPP for projection and multiview hashing for quantization improves retrieval accuracy compared to using only one of these components. Moreover, introducing learnable parameters further improves retrieval accuracy and robustness.
+The authors also discussed some limitations of their method and possible directions for future research. One limitation is that their method assumes that all views are equally important, which may not be true in some cases. Future research could explore ways to assign different weights to different views based on their importance. Another limitation is that their method does not consider semantic information in the data, which may be useful for improving retrieval accuracy. Future research could explore ways to incorporate semantic information into multiview hashing.
+In conclusion, this article proposes a multiview hashing method with learnable parameters for remote sensing image retrieval. The proposed method takes advantage of the low-dimensional nature of remote sensing data by learning consensus compact codes in a view-specific low-dimensional subspace. The use of learnable parameters makes the method more robust and efficient compared to existing methods. Experimental results on three widely used remote sensing datasets demonstrate that the proposed method achieves competitive results compared to other methods in terms of retrieval accuracy while being more efficient and robust.
 
-```js
-$(window).scroll(function () {
-  // this will work when your window scrolled.
-  var scroll = $(window).scrollTop(); //getting the scrolling height of window
-  if (scroll > 100) {
-    $(".header").addClass("header-scrolled");
-  } else {
-    $(".header").removeClass("header-scrolled");
-  }
-});
-```
-
-## Markdown Flavours
-
-There are several different versions of markdown
-
-### CommonMark
-
-From 2012, a group of people including Jeff Atwood and John MacFarlane launched what Atwood characterized as a standardization effort. A community website now aims to "document various tools and resources available to document authors and developers, as well as implementors of the various markdown implementations".
-
-### GitHub Flavored Markdown (GFM)
-
-In 2017, GitHub released a formal specification of their GitHub Flavored Markdown (GFM) that is based on CommonMark. It follows the CommonMark specification exactly except for tables, strikethrough, autolinks and task lists, which the GitHub spec has added as extensions.
-
-![unsplash](https://source.unsplash.com/3igFnx0L2pY/640x360)
-
-### Markdown Extra
-
-Markdown Extra is a lightweight markup language based on Markdown implemented in PHP (originally), Python and Ruby. It adds features not available with plain Markdown syntax. Markdown Extra is supported in some content management systems such as, for example, Drupal.
-
-Markdown Extra adds the following features to Markdown:
-
-- markdown markup inside HTML blocks
-- elements with id/class attribute
-- "fenced code blocks" that span multiple lines of code
-- tables
-- definition lists
-- footnotes
-- abbreviations
+The Video of our oral presentation is:
+<iframe
+    width="640"
+    height="480"
+    src="https://www.youtube.com/watch?v=IP_A_Tor4v8"
+    frameborder="0"
+    allow="autoplay; encrypted-media"
+    allowfullscreen
+>
+</iframe>
