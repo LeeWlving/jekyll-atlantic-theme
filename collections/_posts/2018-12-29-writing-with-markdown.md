@@ -16,7 +16,7 @@ Hashing is very popular for remote sensing image search.  This article proposes 
 
 Overall framework of our methods are shown:
 
-[![p95mrTO.jpg](https://s1.ax1x.com/2023/05/20/p95mrTO.jpg)](https://imgse.com/i/p95mrTO)
+[![p95mrTO.jpg](https://pic.imgdb.cn/item/64ce284c1ddac507cc913a80.jpg)](https://pic.imgdb.cn/item/64ce284c1ddac507cc913a80.jpg)
 
 > The proposed Locality Preserving Multiview Graph Hashing (LPMGH) framework.
 
