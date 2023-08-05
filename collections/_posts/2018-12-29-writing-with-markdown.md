@@ -5,7 +5,7 @@ date: 2023-06-02T10:26:40+10:00
 authors: ["Wenyun Li"]
 categories: ["RemoteSensing", "Hash", "InformationRetrieval"]
 tags: ["InformationRetrieval"]
-description: Learn how to use Markdown to write blog posts. Understand front-matter and how it is used in templates.
+description: icassp 2023 paper.
 thumbnail: "assets/images/unsplash-CTivHyiTbFw-640x360.jpeg"
 image: "https://source.unsplash.com/CTivHyiTbFw/1600x900"
 ---
@@ -30,6 +30,8 @@ Moreover, our approach has several advantages over existing methods in terms of 
 The authors also conducted ablation studies to evaluate the contribution of different components of their method. The results showed that each component of the proposed method contributes to its overall performance. Specifically, using LPP for projection and multiview hashing for quantization improves retrieval accuracy compared to using only one of these components. Moreover, introducing learnable parameters further improves retrieval accuracy and robustness.
 The authors also discussed some limitations of their method and possible directions for future research. One limitation is that their method assumes that all views are equally important, which may not be true in some cases. Future research could explore ways to assign different weights to different views based on their importance. Another limitation is that their method does not consider semantic information in the data, which may be useful for improving retrieval accuracy. Future research could explore ways to incorporate semantic information into multiview hashing.
 In conclusion, this article proposes a multiview hashing method with learnable parameters for remote sensing image retrieval. The proposed method takes advantage of the low-dimensional nature of remote sensing data by learning consensus compact codes in a view-specific low-dimensional subspace. The use of learnable parameters makes the method more robust and efficient compared to existing methods. Experimental results on three widely used remote sensing datasets demonstrate that the proposed method achieves competitive results compared to other methods in terms of retrieval accuracy while being more efficient and robust.
+
+The paper is available at [link](https://ieeexplore.ieee.org/abstract/document/10096369).
 
 The Video of our oral presentation is:
 <iframe
